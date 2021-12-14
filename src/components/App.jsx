@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch, NavLink, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, NavLink, Link } from 'react-router-dom';
 
 // Modules
 import 'jquery';
@@ -18,11 +18,11 @@ import HomeContainer from '../containers/HomeContainer';
 const App = () => {
   return (
     <Router>
-      <Switch> 
-        <Route path="/signup" component={Signup}/>
-        <Route path="/home" component={HomeContainer}/>
-        <Route path="/" component={Login}/>
-      </Switch>
+      <Routes> 
+        <Route path="/signup" element={<Signup />}/>
+        <Route path="/home" element={<HomeContainer />}/>
+        <Route path="/" element={<Login />}/>
+      </Routes>
     </Router>
   );
 };
